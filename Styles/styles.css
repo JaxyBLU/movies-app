@@ -1,0 +1,109 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	max-width: 100%;
+	background-color: #22254b;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+header{
+	background-color: #22254b;
+	display: flex;
+	justify-content: flex-end;
+}
+
+header input{
+	margin: 1.5rem;
+	border-radius: 50px;
+	padding: 0.5rem 1rem;
+	outline: none;
+	border: none;
+	font-family: inherit;
+	font-size: 1rem;
+}
+
+header input::placeholder{
+	font-style: italic;
+	color: #c266ff;
+}
+
+.main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.movie{
+	position: relative;
+	margin: 2rem;
+	border-radius: 3px;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+	background-color: #373b69;
+	width: 300px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.movie img{
+	max-width: 100%;
+}
+
+.movie-info{
+	display: flex;
+	align-items: center;
+	color: #eee;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem 1rem 1rem;
+	letter-spacing: 0.5px;
+}
+
+.movie-info h3{
+	margin: 0;
+}
+
+.movie-info span{
+	font-weight: bold;
+	margin: 0.5rem;
+	background-color: #22254b;
+	border-radius: 3px;
+	padding: 0.25rem 0.5rem;
+}
+
+.movie-info span.green{
+	color: #66ff33;
+}
+
+.movie-info span.orange{
+	color: orange;
+}
+
+.movie-info span.red{
+	color: red;
+}
+
+.overview{
+	font-size: 1rem;
+	padding: 1rem;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	visibility: hidden;
+	transition: visibility 0.3s ease-in;
+	overflow-y: scroll;
+	max-height: 100%;
+}
+
+.movie h3{
+	margin-top: 0;
+	padding: 0;
+}
+
+.movie:hover .overview{
+	visibility: visible;
+}
